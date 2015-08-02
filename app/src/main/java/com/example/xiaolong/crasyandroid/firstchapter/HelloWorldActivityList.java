@@ -18,9 +18,9 @@ import android.widget.TextView;
 import com.example.xiaolong.crasyandroid.R;
 
 /**
- * Created by xiaolong on 15-8-2.
+ * Created by xiaolong on 15-7-30.
  */
-public class HelloWorldList extends AppCompatActivity implements View.OnClickListener {
+public class HelloWorldActivityList extends AppCompatActivity implements View.OnClickListener {
 
     private Button mStartProgram;
     private ExpandableListView mCodeFile;
@@ -42,9 +42,11 @@ public class HelloWorldList extends AppCompatActivity implements View.OnClickLis
                     "代码文件"
             };
             private String[][] codeFile = new String[][] {
-                    { "HelloWorld/src/org/crazyit/helloworld/HelloWorld.java",
-                            "HelloWorld/res/layout/main.xml",
-                            "HelloWorld/res/values/strings.xml" }
+                    { "HelloWorld/src/org/crazyit/helloworld/HelloWorldActivity.java",
+                    "HelloWorld/res/layout/hello_world.xml",
+                    "HelloWorld/res/menu/hello_world.xml",
+                    "HelloWorld/res/values/strings.xml",
+                    "HelloWorld/res/values/styles.xml" }
             };
             @Override
             public int getGroupCount() {
@@ -83,9 +85,9 @@ public class HelloWorldList extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-                LinearLayout ll = new LinearLayout(HelloWorldList.this);
+                LinearLayout ll = new LinearLayout(HelloWorldActivityList.this);
                 ll.setOrientation(LinearLayout.HORIZONTAL);
-                ImageView type = new ImageView(HelloWorldList.this);
+                ImageView type = new ImageView(HelloWorldActivityList.this);
                 AbsListView.LayoutParams lp = new AbsListView.LayoutParams(128, 128);
                 type.setLayoutParams(lp);
                 type.setPadding(36, 0, 0, 0);
@@ -102,10 +104,10 @@ public class HelloWorldList extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-                LinearLayout ll = new LinearLayout(HelloWorldList.this);
+                LinearLayout ll = new LinearLayout(HelloWorldActivityList.this);
                 ll.setOrientation(LinearLayout.HORIZONTAL);
                 ll.setGravity(Gravity.CENTER_VERTICAL);
-                ImageView type = new ImageView(HelloWorldList.this);
+                ImageView type = new ImageView(HelloWorldActivityList.this);
                 if (getChild(groupPosition,childPosition).toString().endsWith(".java")) {
                     type.setImageResource(filetype[1]);
                 } else if (getChild(groupPosition,childPosition).toString().endsWith(".xml")) {
@@ -129,7 +131,7 @@ public class HelloWorldList extends AppCompatActivity implements View.OnClickLis
 
             private TextView getTextView() {
                 AbsListView.LayoutParams lp = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                TextView textView = new TextView(HelloWorldList.this);
+                TextView textView = new TextView(HelloWorldActivityList.this);
                 textView.setLayoutParams(lp);
                 textView.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
                 textView.setPadding(48, 0, 0, 0);
@@ -147,7 +149,7 @@ public class HelloWorldList extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start_program:
-                Intent intent = new Intent(HelloWorldList.this, HelloWorld.class);
+                Intent intent = new Intent(HelloWorldActivityList.this, HelloWorldActivity.class);
                 startActivity(intent);
                 break;
         }

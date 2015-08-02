@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.xiaolong.crasyandroid.R;
+import com.example.xiaolong.crasyandroid.firstchapter.HelloWorldActivityList;
 import com.example.xiaolong.crasyandroid.firstchapter.HelloWorldList;
 
 /**
@@ -35,6 +36,9 @@ public class DevelopEntertainmentActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (mSection[position].startsWith("1.4")) {
 
+                    Intent intent = new Intent(DevelopEntertainmentActivity.this, HelloWorldActivityList.class);
+                    startActivity(intent);
+                } else if (mSection[position].startsWith("1.5")) {
                     Intent intent = new Intent(DevelopEntertainmentActivity.this, HelloWorldList.class);
                     startActivity(intent);
                 }

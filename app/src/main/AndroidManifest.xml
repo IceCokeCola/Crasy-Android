@@ -21,14 +21,22 @@
             android:label="Develop Entertainment" >
         </activity>
 
-        <activity android:name=".firstchapter.HelloWorldList"
+        <activity android:name=".firstchapter.HelloWorldActivityList"
             android:label="Hello World" >
 
+        </activity>
+
+        <activity android:name=".firstchapter.HelloWorldList"
+            android:label="Hello World" >
         </activity>
 
         <activity
             android:name=".firstchapter.HelloWorldActivity"
             android:label="@string/title_activity_hello_world">
+        </activity>
+
+        <activity android:name=".firstchapter.HelloWorld"
+            android:label="Hello World" >
         </activity>
     </application>
 
