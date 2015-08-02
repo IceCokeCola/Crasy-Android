@@ -5,14 +5,13 @@ package com.example.xiaolong.crasyandroid.firstchapter;
  */
 import android.os.Bundle;
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.xiaolong.crasyandroid.R;
 
-public class HelloWorldActivity extends AppCompatActivity
+public class HelloWorldActivity extends Activity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
