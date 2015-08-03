@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.xiaolong.crasyandroid.activities.ChapterActivity;
 import com.example.xiaolong.crasyandroid.activities.DevelopEntertainmentActivity;
 
 public class CrasyAndroidActivity extends AppCompatActivity {
@@ -44,14 +45,18 @@ public class CrasyAndroidActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (mChapter[position].startsWith("1.")) {
+                Intent firstChapterIntent = new Intent(CrasyAndroidActivity.this, ChapterActivity.class);
+                firstChapterIntent.putExtra("chapter",mChapter[position]);
+                startActivity(firstChapterIntent);
 
-                    Intent firstChapterIntent = new Intent(CrasyAndroidActivity.this, DevelopEntertainmentActivity.class);
-                    startActivity(firstChapterIntent);
-
-                } else if (mChapter[position].startsWith("2.")) {
-
-                }
+//                if (mChapter[position].startsWith("1.")) {
+//
+//                    Intent firstChapterIntent = new Intent(CrasyAndroidActivity.this, DevelopEntertainmentActivity.class);
+//                    startActivity(firstChapterIntent);
+//
+//                } else if (mChapter[position].startsWith("2.")) {
+//
+//                }
             }
         });
     }

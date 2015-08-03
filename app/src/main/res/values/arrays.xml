@@ -9,4 +9,19 @@
         <item>1.4 开始第一个Android应用</item>
         <item>1.5 Android应用结构分析</item>
     </string-array>
+
+    <string-array name="section_1_4">
+        <item>HelloWorld/src/org/crazyit/helloworld/HelloWorldActivity.java</item>
+        <item>HelloWorld/res/layout/hello_world.xml</item>
+        <item>HelloWorld/res/menu/hello_world.xml</item>
+        <item>HelloWorld/res/values/strings.xml</item>
+        <item>HelloWorld/res/values/styles.xml</item>
+    </string-array>
+
+    <string-array name="section_1_5">
+        <item>HelloWorld/src/org/crazyit/helloworld/HelloWorld.java</item>
+        <item>HelloWorld/res/layout/main.xml</item>
+        <item>HelloWorld/res/values/strings.xml</item>
+    </string-array>
+
 </resources>
