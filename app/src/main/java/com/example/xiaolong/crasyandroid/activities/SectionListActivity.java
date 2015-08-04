@@ -137,6 +137,17 @@ public class SectionListActivity extends AppCompatActivity implements View.OnCli
                 TextView textView = getTextView();
                 textView.setText(getChild(groupPosition,childPosition).toString());
                 ll.addView(textView);
+
+                final String filename = getChild(groupPosition,childPosition).toString();
+                ll.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.setClass(SectionListActivity.this, FIleDisplayActivity.class);
+                        intent.putExtra("filename", filename);
+                        startActivity(intent);
+                    }
+                });
                 return ll;
             }
 

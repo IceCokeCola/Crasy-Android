@@ -41,6 +41,7 @@
 
         <activity android:name=".activities.ChapterActivity" ></activity>
         <activity android:name=".activities.SectionListActivity" ></activity>
+        <activity android:name=".activities.FIleDisplayActivity" ></activity>
     </application>
 
 </manifest>
