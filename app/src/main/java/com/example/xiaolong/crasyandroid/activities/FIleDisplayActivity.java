@@ -4,9 +4,11 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableStringBuilder;
 import android.widget.TextView;
 
 import com.example.xiaolong.crasyandroid.R;
+import com.example.xiaolong.crasyandroid.util.FileDisplayUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,6 +20,7 @@ public class FIleDisplayActivity extends AppCompatActivity {
     TextView mFileContent;
     String mTitle;
     String mContent ="";
+    SpannableStringBuilder mContentSpannable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class FIleDisplayActivity extends AppCompatActivity {
             try {
                 while ((line_str = reader.readLine()) != null) {
                     mContent += line_str + "\n";
+                    //mContentSpannable.append(FileDisplayUtils.getSpannableString(line_str + "\n"));
                     publishProgress(line_str);
                 }
 
@@ -63,7 +67,9 @@ public class FIleDisplayActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
-            mFileContent.setText(mContent);
+            //mFileContent.setText(mContent);
+            mContentSpannable = FileDisplayUtils.getSpannableString(mContent);
+            mFileContent.setText(mContentSpannable);
         }
     }
 }
