@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.xiaolong.crasyandroid.R;
 import com.example.xiaolong.crasyandroid.firstchapter.HelloWorld;
 import com.example.xiaolong.crasyandroid.firstchapter.HelloWorldActivity;
+import com.example.xiaolong.crasyandroid.secondchapter.CodeView;
 
 /**
  * Created by xiaolong on 15-8-3.
@@ -43,6 +44,8 @@ public class SectionListActivity extends AppCompatActivity implements View.OnCli
             mFileOfCode = getResources().getStringArray(R.array.section_1_4);
         } else if (mSection.startsWith("1.5")) {
             mFileOfCode = getResources().getStringArray(R.array.section_1_5);
+        } else if (mSection.startsWith("2.1")) {
+            mFileOfCode = getResources().getStringArray(R.array.section_2_1);
         }
 
         this.setTitle(mSection);
@@ -181,8 +184,9 @@ public class SectionListActivity extends AppCompatActivity implements View.OnCli
                     intent.setClass(SectionListActivity.this, HelloWorldActivity.class);
                 } else if (mSection.startsWith("1.5")) {
                     intent.setClass(SectionListActivity.this, HelloWorld.class);
+                } else if (mSection.startsWith("2.1")) {
+                    intent.setClass(SectionListActivity.this, CodeView.class);
                 }
-
                 startActivity(intent);
                 break;
         }

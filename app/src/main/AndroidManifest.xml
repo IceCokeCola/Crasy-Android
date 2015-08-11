@@ -42,6 +42,8 @@
         <activity android:name=".activities.ChapterActivity" ></activity>
         <activity android:name=".activities.SectionListActivity" ></activity>
         <activity android:name=".activities.FIleDisplayActivity" ></activity>
+        <activity android:name=".secondchapter.CodeView"
+            android:label="@string/codeview_app_name"></activity>
     </application>
 
 </manifest>

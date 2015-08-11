@@ -24,4 +24,15 @@
         <item>HelloWorld/res/values/strings.xml</item>
     </string-array>
 
+
+    <string-array name="second_chapter">
+        <item>2.1 界面编程与视图（View）组件</item>
+        <item>2.2 第1组UI组件：布局管理器</item>
+    </string-array>
+
+    <string-array name="section_2_1">
+        <item>CodeView/src/org/crazyit/ui/CodeView.java</item>
+        <item>CodeView/res/values/strings.xml</item>
+    </string-array>
+
 </resources>

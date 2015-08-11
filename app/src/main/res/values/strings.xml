@@ -5,4 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_hello_world">第一个Android应用</string>
+
+    <string name="codeview_hello">Hello World, CodeView!</string>
+    <string name="codeview_app_name">代码中控制UI界面</string>
+    <string name="ok">单击我</string>
 </resources>

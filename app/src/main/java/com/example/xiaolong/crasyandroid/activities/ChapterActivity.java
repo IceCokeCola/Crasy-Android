@@ -33,6 +33,7 @@ public class ChapterActivity extends AppCompatActivity {
         if (mChapter.startsWith("1.")) {
             mSection = getResources().getStringArray(R.array.first_chapter);
         } else if (mChapter.startsWith("2.")) {
+            mSection = getResources().getStringArray(R.array.second_chapter);
 
         }
 
